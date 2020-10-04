@@ -1,13 +1,17 @@
-# How to Contribute
+# How to Contribute 🌈
 
-Everyone can contribute to this website. 
+Everyone can contribute to this Node.js App! 😀
+
+Contributions to this repository encouraged! We're all learning so mistakes and confusion are welcome, we're here to help and try to make contributing as friendly and accessible as possible. 
 
 ### We Are Expecting - 
 
-- Bug-fixes
-- Making The code Easier to read (including the comments)
-- adding anything that would improove this Node.js App. 
+- Bug-fixes 🐞
+- Making The code Easier to read (including the code comments) 📖
+- Adding anything that would improve this Node.js App. ✅
 
-To Contribute, Fork this Repo and create a Pull Request. 
+To Contribute, Fork 🍴 this Repo and create a Pull Request. 
 
-Happy Contributing!
+Happy Contributing! 😀
+
+-samyakbambole (owner)
