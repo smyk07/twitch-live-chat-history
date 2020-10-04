@@ -1,7 +1,7 @@
 {
-  "name": "tmi",
+  "name": "twitch-live-chat-history",
   "version": "1.0.0",
-  "description": "Twitch Chat Overlay",
+  "description": "Twitch Chat Overlay and History",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
