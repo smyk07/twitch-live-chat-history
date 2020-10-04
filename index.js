@@ -33,16 +33,26 @@ const client = new tmi.Client({
 
 client.connect();
 
-client.on('message', (channel, tags, message, self) => {
-	// "Alca: Hello, World!"
+client.on('message', (channel, userState, message, self) => {
+	// Don't listen to own messages
+	if(self) return;
 
-	console.log(chalk.cyanBright(`${tags['display-name']}: ${message}`));
+	const { 'display-name': displayName, color, mod } = userState;
+
+	let output = `${displayName}: ${message}`;
+
+	if(mod) output = `[MOD]` + output;
+
+	if(color) output = chalk.hex(color)(output);
+	else output = chalk.cyanBright(output)
+
+	console.log(output);
 
 	// database.insert({socket_id: socket.id, time: socket.handshake.time}); 
-	database.insert({username: tags['display-name'], message: message, channel: twitchChannel}); 
+	database.insert({username: displayName, message: message, channel: twitchChannel});
 
 	if (message === '!drop me') {
-		console.log(`${tags['display-name']} just dropped!`); 
-		dropsDb.insert({username: tags['display-name'], channel: twitchChannel}); 
+		console.log(`${displayName} just dropped!`);
+		dropsDb.insert({username: displayName, channel: twitchChannel});
 	}
 });
