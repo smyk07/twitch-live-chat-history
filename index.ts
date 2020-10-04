@@ -1,10 +1,9 @@
+import { Client } from "tmi.js";
+import * as chalk from "chalk";
+import Datastore from "nedb";
+
 const twitchChannel = process.argv.slice(2); 
-
-const tmi = require('tmi.js');
-const chalk = require('chalk'); 
 const { cyanBright } = require('chalk');
-
-const Datastore = require('nedb'); 
 
 const database = new Datastore('chats.db'); 
 database.loadDatabase();
@@ -12,7 +11,7 @@ database.loadDatabase();
 const dropsDb = new Datastore('drops.db'); 
 dropsDb.loadDatabase(); 
 
-const client = new tmi.Client({
+const client = Client({
 	connection: {
 		secure: true,
 		reconnect: true
@@ -23,7 +22,7 @@ const client = new tmi.Client({
 
 client.connect();
 
-client.on('message', (channel, tags, message, self) => {
+client.on('message', (_, tags, message) => {
 	// "Alca: Hello, World!"
 
 	console.log(chalk.cyanBright(`${tags['display-name']}: ${message}`));

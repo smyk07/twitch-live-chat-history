@@ -4,7 +4,8 @@
   "description": "Twitch Chat Overlay",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "keywords": [
     "TMI",
@@ -19,5 +20,11 @@
     "nedb": "^1.8.0",
     "tmi.js": "^1.5.0"
   },
-  
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/nedb": "^1.8.11",
+    "@types/node": "^14.11.2",
+    "@types/tmi.js": "^1.4.2",
+    "typescript": "^4.0.3"
+  }
 }

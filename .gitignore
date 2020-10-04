@@ -1,3 +1,4 @@
 node_modules
 chats.db
-drops.db 
+drops.db
+build/**
