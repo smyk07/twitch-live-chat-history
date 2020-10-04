@@ -19,6 +19,10 @@ npm ci
 or if you are under node 10, use:
 ```
 npm i
+
+OR 
+
+npm install
 ```
 
 ### Run The APP!
@@ -39,10 +43,11 @@ If you want to retrieve chats, it has been stores in a Database called `chats.db
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Authors
+## Authors 🌈
 
 - Samyak Bambole - Initial work - [samyakbambole](https://github.com/samyakbambole)
+- Joël Piazzalunga-Lerat - [jpiazzal](https://github.com/jpiazzal)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
