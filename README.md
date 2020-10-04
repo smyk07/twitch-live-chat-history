@@ -1,21 +1,48 @@
 # twitch-live-chat-history
 
-### Start - 
+This small node.js application `twitch-live-chat-history`, allow you to store chat history of a Twitch live stream.
 
-##### Install all the npm packages
+## Getting Started
 
+### Prerequisites
+
+You need to install `node.js` ([see here](https://nodejs.org/en/))
+
+### Install
+
+After cloning the project, you need to install npm packages in the project.
+
+If you have at least node.js 10+, do:
+```
+npm ci
+```
+or if you are under node 10, use:
 ```
 npm i
 ```
 
-##### Run The APP!
+### Run The APP!
+
+Replace `TWITCH_CHANNEL_NAME` by the the name of the Twitch channel you want to store the history.
 
 ```
-node index.js twitch-channel-name
+node index.js TWITCH_CHANNEL_NAME
 ```
 
-### What it does
+## How it works?
 
-Suppose you have a Twitch Channel and You want all the history of your Twitch live chat of a stream, You can use this Node.js Application. It stores all the chats in a Database (chats.db). This Node.js Application will also console.log() all the chats. 
+When application is running, it will display all the chats.
 
-Liscense - MIT 
+If you want to retrieve chats, it has been stores in a Database called `chats.db`.
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Authors
+
+- Samyak Bambole - Initial work - [samyakbambole](https://github.com/samyakbambole)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
