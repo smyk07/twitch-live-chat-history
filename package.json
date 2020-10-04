@@ -1,0 +1,22 @@
+{
+  "name": "tmi",
+  "version": "1.0.0",
+  "description": "Twitch Chat Overlay",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "TMI",
+    "Twitch",
+    "Chat",
+    "Overlay"
+  ],
+  "author": "Samyak Bambole",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "nedb": "^1.8.0",
+    "tmi.js": "^1.5.0"
+  }
+}
