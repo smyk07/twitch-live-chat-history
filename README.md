@@ -33,6 +33,12 @@ Replace `TWITCH_CHANNEL_NAME` by the the name of the Twitch channel you want to 
 npm start TWITCH_CHANNEL_NAME
 ```
 
+You can listen from multiples Twitch channels, just add it as arguments:
+
+```
+npm start TWITCH_CHANNEL_NAME_1 TWITCH_CHANNEL_NAME_2 TWITCH_CHANNEL_NAME_3
+```
+
 ## How it works?
 
 When application is running, it will display all the chats.
