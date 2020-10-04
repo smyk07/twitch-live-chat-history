@@ -1,6 +1,6 @@
 # twitch-live-chat-history
 
-This small node.js application `twitch-live-chat-history`, allow you to store chat history of a Twitch live stream.
+This small node.js application `twitch-live-chat-history`, allows you to store chat history of a Twitch live stream.
 
 ## Getting Started
 
