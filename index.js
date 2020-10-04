@@ -40,7 +40,7 @@ client.on('message', (channel, userState, message, self) => {
 
 	const { 'display-name': username, color, mod } = userState;
 
-	let output = `${channel} | ${mod && '[MOD'}${username}: ${message}`;
+	let output = `${channel} | ${mod && '[MOD]'}${username}: ${message}`;
 
 	if(color) output = chalk.hex(color)(output);
 	else output = chalk.cyanBright(output)
