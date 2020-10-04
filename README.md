@@ -6,6 +6,10 @@
 
 ```
 npm i
+
+OR 
+
+npm install
 ```
 
 ##### Run The APP!
