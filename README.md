@@ -30,7 +30,7 @@ npm install
 Replace `TWITCH_CHANNEL_NAME` by the the name of the Twitch channel you want to store the history.
 
 ```
-node index.js TWITCH_CHANNEL_NAME
+npm start TWITCH_CHANNEL_NAME
 ```
 
 ## How it works?

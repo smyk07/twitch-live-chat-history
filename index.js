@@ -1,8 +1,18 @@
+"use strict";
+const chalk = require('chalk');
+
+if (!process.argv[2]) {
+	console.error(chalk.redBright("You need to add a Twitch channel name as first argument."));
+	console.info(chalk.yellowBright("eg: npm start TWITCH_CHANNEL_NAME"));
+	console.info(chalk.yellowBright("\n->  Check README.md for more informations!"));
+	process.exit(0);
+} else {
+	console.info(chalk.greenBright("App start successfully, you will see twitch chats soon..."));
+}
+
 const twitchChannel = process.argv.slice(2); 
 
 const tmi = require('tmi.js');
-const chalk = require('chalk'); 
-const { cyanBright } = require('chalk');
 
 const Datastore = require('nedb'); 
 
