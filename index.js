@@ -47,13 +47,19 @@ const client = new tmi.Client({
 // connect client
 client.connect();
 
-console.info(chalk.greenBright("App start successfully, you will see twitch chats soon..."));
+// Clears Console
+function clearConsoleAndScrollbackBuffer() {
+	process.stdout.write("\u001b[3J\u001b[2J\u001b[1J");console.clear();
+	}
+
+console.info(chalk.greenBright("Fetching messages..."));
+let fetched = false;
 
 // listen messages from twitch channels
 client.on('message', (channel, tags, message, self) => {
 	// "#twitchChannel | Alca: Hello, World!"
-
-	console.log(chalk.cyanBright(`${channel} | ${tags['display-name']}: ${message}`));
+	if(!fetched){clearConsoleAndScrollbackBuffer();console.info('---------------'+twitchChannels[0]+'---------------');fetched=true;}
+	console.log(chalk.cyanBright(`${channel} | ${tags['display-name']} > ${message}`));
 
 	// database.insert({socket_id: socket.id, time: socket.handshake.time}); 
 	database.insert({
