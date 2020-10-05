@@ -54,6 +54,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 - Samyak Bambole - Initial work - [samyakbambole](https://github.com/samyakbambole)
 - Joël Piazzalunga-Lerat - [jpiazzal](https://github.com/jpiazzal)
 - Nicholas - [nicolashacala](https://github.com/nicolashacala)
+- Talha - [symtalha14](https://github.com/symtalha14)
 
 ## License
 
