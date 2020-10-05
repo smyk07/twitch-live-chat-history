@@ -60,4 +60,4 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-## Make Sure to Give This Repository a Star! 🌟
+## Make Sure to Give This Repository a Star! ⭐
