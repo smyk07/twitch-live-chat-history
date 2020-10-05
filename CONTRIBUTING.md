@@ -14,4 +14,6 @@ To Contribute, Fork 🍴 this Repo and create a Pull Request.
 
 Happy Contributing! 😀
 
+Make sure to give this Repository a Star! ⭐
+
 -samyakbambole (owner)
