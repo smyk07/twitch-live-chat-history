@@ -2,17 +2,31 @@ body {
     font-family: "Roboto Light", sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background: #202020;
+    height: 50px;
+}
+
 h3 {
     margin-top: 0;
 }
 
 .chats {
     float: left;
-    height: 250px;
-    width: 300px;
-    overflow-y: auto;
+    height: 300px;
+    width: 500px;
     padding: 4px 16px 16px 16px;
     border: 1px solid #aaa;
     border-radius: 3px;
     margin: 8px;
+    overflow-y: hidden;
+}
+
+.chats:hover {
+    overflow-y: auto;
 }
