@@ -1,7 +1,22 @@
 "use strict";
 const chalk = require('chalk');
 const tmi = require('tmi.js');
-const Datastore = require('nedb'); 
+const Datastore = require('nedb');
+const path = require('path');
+
+const express = require('express');
+const app = express();
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+
+app.use(express.static(path.join(__dirname, "web")));
+app.set("views", path.join(__dirname, "web"));
+app.engine("html", require("ejs").renderFile);
+app.set("view engine", "html");
+
+app.use("/", (req, res) => {
+	res.render("index.html");
+});
 
 // add some security in case of there is no twitch channels as argument
 if (!process.argv[2]) {
@@ -55,3 +70,14 @@ client.on('message', (channel, tags, message, self) => {
 		}); 
 	}
 });
+
+io.on('connection', socket => {
+	socket.emit('channels', twitchChannels);
+
+	client.on('message', (channel, tags, message, self) => {
+		if(self) return;
+		socket.emit('chat', {channel, tags, message});
+	})
+});
+
+server.listen(8080);
