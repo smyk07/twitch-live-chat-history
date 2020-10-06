@@ -8,6 +8,24 @@
     height: 50px;
 }
 
+.nav-col {
+    height: 100vh;
+    width: 264px;
+    position: fixed;
+}
+
+.chat-col {
+    margin-left: 270px;
+}
+
+.nav {
+    height: 100%;
+}
+
+.btn-primary {
+    width: 80%;
+}
+
 h3 {
     margin-top: 0;
 }

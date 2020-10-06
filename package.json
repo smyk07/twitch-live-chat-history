@@ -4,7 +4,7 @@
   "description": "Twitch Chat Overlay and History",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -22,5 +22,8 @@
     "nedb": "^1.8.0",
     "socket.io": "^2.3.0",
     "tmi.js": "^1.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

@@ -13,6 +13,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
 </head>
 <body>
+    <div class="nav-col">
+        <nav class="nav flex-column bg-light" id="channelNav">
+            <div class="input-group input-group-sm mb-3 mt-5 pl-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Add channel</span>
+                </div>
+                <input id="chatInput" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <button type="button" class="btn btn-primary btn-sm ml-3" onclick="addChat()">Add</button>
+        </nav>
+    </div>
+    <div class="chat-col">
+        <div id="chatRooms">
+        </div>
+    </div>
 <script src="./app.js"></script>
 </body>
 </html>

@@ -2,12 +2,32 @@ const socket = io("http://localhost:8080");
 
 const renderChats = channels => {
   channels.forEach(c => {
-    $('body').append(`
-      <div class="chats" id="${c.replace('#', '')}">
-        <h3>${c}</h3>
-      </div>
-    `)
+    console.log(!$(c).length);
+    if(!$(c).length) {
+      $('#chatRooms').append(`
+        <div class="chats" id="${c.replace('#', '')}">
+          <h3>${c}</h3>
+        </div>
+      `);
+      $('#channelNav').append(`
+        <button class="btn btn-link" id="${c.replace('#', '')}Button" data-channel="${c}">${c}</button>
+      `)
+      $(`${c}Button`).on('click', e => {
+        const target = $(e.target);
+        const channelToDisconnect = target.data('channel');
+        console.log(channelToDisconnect);
+        $(channelToDisconnect).remove();
+        target.remove();
+        socket.emit('disconnectChannel', channelToDisconnect);
+      })
+    }
   })
+}
+
+const addChat = () => {
+  const chatInputValue = $('#chatInput').val().toLowerCase();
+  socket.emit('addChat', `#${chatInputValue}`);
+  $('#chatInput').val('');
 }
 
 const renderMessage = (message) => {
@@ -15,7 +35,7 @@ const renderMessage = (message) => {
   const {'display-name': displayName, color, mod} = tags;
 
   const chatRoom = $(channel);
-  const isScrolledToBottom = chatRoom[0].scrollHeight - chatRoom[0].clientHeight <= chatRoom[0].scrollTop + 1;
+  const isScrolledToBottom = chatRoom[0].scrollHeight - chatRoom[0].clientHeight <= chatRoom[0].scrollTop + 5;
 
   chatRoom.append(`
     <p>
