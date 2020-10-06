@@ -9,6 +9,9 @@ const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 
+const { findIcon } = require('./helpers');
+const emoticons = require('./data/twitch-emoticons');
+
 app.use(express.static(path.join(__dirname, "web")));
 app.set("views", path.join(__dirname, "web"));
 app.engine("html", require("ejs").renderFile);
@@ -82,7 +85,7 @@ io.on('connection', socket => {
 
 	client.on('message', (channel, tags, message, self) => {
 		if(self) return;
-		socket.emit('chat', {channel, tags, message});
+		socket.emit('chat', {channel, tags, message: findIcon(message, emoticons)});
 	})
 });
 
