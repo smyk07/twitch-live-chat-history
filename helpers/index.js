@@ -11,7 +11,6 @@ const findIcon = (message, iconsArr) => {
       const targetMessage = newMessage.length > 0 ? newMessage : message;
 
       newMessage = targetMessage.replace(word, `<span><img src=${target[0].url} alt=${target[0].name} /></span>`);
-      console.log('newMessage', newMessage);
     }
   });
 
