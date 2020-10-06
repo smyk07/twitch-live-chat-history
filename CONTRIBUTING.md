@@ -7,8 +7,8 @@ Contributions to this repository encouraged! We're all learning so mistakes and 
 ### We Are Expecting - 
 
 - Bug-fixes 🐞
-- Making The code Easier to read (including the code comments) 📖
 - Adding anything that would improve this Node.js App. ✅
+- Improving The Web App. 🌐
 
 To Contribute, Fork 🍴 this Repo and create a Pull Request. 
 
