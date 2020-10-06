@@ -61,7 +61,7 @@ let fetched = false;
 // listen messages from twitch channels
 client.on('message', (channel, tags, message, self) => {
 	// "#twitchChannel | Alca: Hello, World!"
-	//if(!fetched){clearConsoleAndScrollbackBuffer();console.info('---------------'+twitchChannels[0]+'---------------');fetched=true;}
+	if(!fetched){clearConsoleAndScrollbackBuffer();console.info('---------------'+'Twitch Live Chat'+'---------------');fetched=true;}
 	console.log(chalk.cyanBright(`${channel} | ${tags['display-name']} > ${message}`));
 
 	// database.insert({socket_id: socket.id, time: socket.handshake.time}); 
