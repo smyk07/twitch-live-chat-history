@@ -1,7 +1,3 @@
-// import { createRequire } from 'module';
-// const require = createRequire(import.meta.url);
-// const iconsArr = require('./data/twitch-emoticons');
-
 const socket = io("http://localhost:8080");
 
 const renderChats = channels => {
