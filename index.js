@@ -21,16 +21,7 @@ app.use("/", (req, res) => {
 	res.render("index.html");
 });
 
-// add some security in case of there is no twitch channels as argument
-if (!process.argv[2]) {
-	console.error(chalk.redBright("You need to add a Twitch channel name as first argument."));
-	console.info(chalk.yellowBright("eg: npm start TWITCH_CHANNEL_NAME_1 TWITCH_CHANNEL_NAME_2"));
-	console.info(chalk.yellowBright("\n->  Check README.md for more informations!"));
-	process.exit(0);
-}
-
-// get twitch channels from arguments
-const twitchChannels = process.argv.slice(2); 
+let twitchChannels = [];
 
 // load databases
 const database = new Datastore('chats.db'); 
@@ -43,12 +34,8 @@ const client = new tmi.Client({
 	connection: {
 		secure: true,
 		reconnect: true
-	},
-	channels: twitchChannels
+	}
 });
-
-// connect client
-client.connect();
 
 // Clears Console
 function clearConsoleAndScrollbackBuffer() {
@@ -81,11 +68,25 @@ client.on('message', (channel, tags, message, self) => {
 });
 
 io.on('connection', socket => {
+	// connect client
+	client.connect();
+
 	socket.emit('channels', twitchChannels);
 
 	client.on('message', (channel, tags, message, self) => {
 		if(self) return;
 		socket.emit('chat', {channel, tags, message: findIcon(message, emoticons)});
+	})
+
+	socket.on('addChat', newChannel => {
+		twitchChannels.push(newChannel);
+		client.join(newChannel);
+		socket.emit('channels', twitchChannels);
+	})
+
+	socket.on('disconnectChannel', channelToDisconnect => {
+		twitchChannels = twitchChannels.filter(channel => channel !== channelToDisconnect);
+		client.part(channelToDisconnect.replace('#', ''))
 	})
 });
 
