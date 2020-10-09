@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Twitch Live Chat</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="themes/styles.css" class="theme" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="nav-col">
-        <nav class="nav flex-column bg-light" id="channelNav">
-            <div class="input-group input-group-sm mb-3 mt-5 pl-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Add channel</span>
-                </div>
-                <input id="chatInput" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <button type="button" class="btn btn-primary btn-sm ml-3" onclick="addChat()">Add</button>
-        </nav>
+      <nav class="nav flex-column bg-light" id="channelNav">
+        <div class="row mb-3 m-3 pl-3">
+          <p class="label-dark-mode">Dark mode</p>
+          <label class="switch">
+            <input type="checkbox" class="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="input-group input-group-sm mb-3 mt-5 pl-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+              Add channel
+            </span>
+          </div>
+          <input
+            id="chatInput"
+            type="text"
+            class="form-control"
+            aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+        <button
+          type="button"
+          class="btn btn-primary btn-sm ml-3"
+          onclick="addChat()"
+        >
+          Add
+        </button>
+      </nav>
     </div>
     <div class="chat-col">
-        <div id="chatRooms">
-        </div>
+      <div id="chatRooms"></div>
     </div>
-<script src="./app.js"></script>
-</body>
+    <script src="./app.js"></script>
+  </body>
 </html>
