@@ -56,6 +56,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 - Nicholas - [nicolashacala](https://github.com/nicolashacala)
 - Talha - [symtalha14](https://github.com/symtalha14)
 - Erdem Uslu [erdemuslu](https://github.com/erdemuslu)
+- Roger Y [rogercyyu](https://github.com/rogercyyu)
 
 ## License
 
