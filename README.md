@@ -57,6 +57,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 - Talha - [symtalha14](https://github.com/symtalha14)
 - Erdem Uslu [erdemuslu](https://github.com/erdemuslu)
 - Roger Y [rogercyyu](https://github.com/rogercyyu)
+- Axel Campos Salazar [Babel78](https://github.com/Babel78)
 
 ## License
 
