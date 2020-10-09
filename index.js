@@ -1,4 +1,5 @@
 "use strict";
+const twitchChannelsArgs = process.argv.slice(2); 
 const chalk = require('chalk');
 const tmi = require('tmi.js');
 const Datastore = require('nedb');
@@ -34,7 +35,8 @@ const client = new tmi.Client({
 	connection: {
 		secure: true,
 		reconnect: true
-	}
+	},
+	channels: twitchChannelsArgs
 });
 
 // Clears Console
@@ -70,6 +72,12 @@ client.on('message', (channel, tags, message, self) => {
 io.on('connection', socket => {
 	// connect client
 	client.connect();
+
+	if (twitchChannelsArgs.length > 0) {
+		twitchChannelsArgs.forEach(newChannel => {
+			twitchChannels.push(newChannel);
+		});
+	}
 
 	socket.emit('channels', twitchChannels);
 
