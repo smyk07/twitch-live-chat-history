@@ -60,6 +60,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 - Erdem Uslu [erdemuslu](https://github.com/erdemuslu)
 - Roger Y [rogercyyu](https://github.com/rogercyyu)
 - Axel Campos Salazar [Babel78](https://github.com/Babel78)
+- Jason Chan [Jchann24](https://github.com/Jchann24)
 
 ## License
 
