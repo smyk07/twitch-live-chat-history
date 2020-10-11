@@ -7,7 +7,7 @@ Contributions to this repository encouraged! We're all learning so mistakes and 
 ### Steps for contributing 🌈
 
 - Fork this Repository 🍴
-- Clone the forked Repository 💻
+- Clone the forked Repository on your Laptop / PC 💻
 - Make the changes 🧺
 - Run the app 🏃‍♂️
 - Commit to your forked Repository 🌐
