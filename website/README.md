@@ -14,7 +14,7 @@
 - [ ] Information about the Project
 - [ ] Link to GitHub Repo
 - [ ] Link for cloning repo (https & ssh)
-- [x] Contributors
+- [x] Contributors       
      - [x] Ordered name of all the contributors and owners. 
 - [ ] Steps to install and use the project. 
 - [ ] Contribute Page
