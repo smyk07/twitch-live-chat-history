@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "start:local": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettify": "prettier --write ."
   },
   "keywords": [
     "TMI",
@@ -26,6 +27,7 @@
     "tmi.js": "^1.5.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.2"
   }
 }

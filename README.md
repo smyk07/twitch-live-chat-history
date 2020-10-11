@@ -13,14 +13,17 @@ You need to install `node.js` ([see here](https://nodejs.org/en/))
 After cloning the project, you need to install npm packages in the project.
 
 If you have at least node.js 10+, do:
+
 ```
 npm ci
 ```
+
 or if you are under node 10, use:
+
 ```
 npm i
 
-OR 
+OR
 
 npm install
 ```
