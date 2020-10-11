@@ -22,7 +22,7 @@ Contributions to this repository encouraged! We're all learning so mistakes and 
 - Improving `console.log` stuff 💻
 - Making the app easier to use 🔥
 
-### We are *NOT* Expecting ❌
+### We are **NOT** Expecting ❌
 
 - Moving / deleting / adding Code Comments ❌
 - Messing up the code in some or the other way ❌
