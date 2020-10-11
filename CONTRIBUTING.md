@@ -10,6 +10,7 @@ Contributions to this repository encouraged! We're all learning so mistakes and 
 - Clone the forked Repository on your Laptop / PC 💻
 - Make the changes 🧺
 - Run the app 🏃‍♂️
+- Fix errors (if exist) 🚫
 - Commit to your forked Repository 🌐
 - Create a PR ✅
 
