@@ -39,9 +39,11 @@ You can listen from multiples Twitch channels, just add it as arguments:
 npm start TWITCH_CHANNEL_NAME_1 TWITCH_CHANNEL_NAME_2 TWITCH_CHANNEL_NAME_3
 ```
 
+A Web interface is also available when you start this app at http://localhost:8080
+
 ## How it works?
 
-When application is running, it will display all the chats.
+When application is running, it will display all the chats in the terminal as well as a web interface.
 
 If you want to retrieve chats, it has been stores in a Database called `chats.db`.
 
