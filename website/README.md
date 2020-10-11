@@ -13,9 +13,13 @@
 
 - [ ] Information about the Project
 - [ ] Link to GitHub Repo
+- [ ] Link for cloning repo (https & ssh)
 - [ ] Contributors
      - [ ] Ordered name of all the contributors and owners. 
 - [ ] Steps to install and use the project. 
+- [ ] Contribute Page
+     - [ ] Steps to Contribute
+     - [ ] Link to CONTRIBUTING.md
 - [ ] How to use the project
 - [ ] How to get History of chats
 - [ ] Information about the license.  
