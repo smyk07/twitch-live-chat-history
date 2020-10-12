@@ -1,22 +1,18 @@
 const findIcon = (message, iconsArr) => {
-  let newMessage = '';
+  let newMessage = message;
 
-  message.split(' ').forEach((word) => {
-    const target = iconsArr.filter(icon => icon.name === word);
-    if (
-      target.length > 0
-      && target[0]
-      && target[0].url
-    ) {
-      const targetMessage = newMessage.length > 0 ? newMessage : message;
-
-      newMessage = targetMessage.replace(word, `<span><img src=${target[0].url} alt=${target[0].name} /></span>`);
+  const uniqueMessages = message.split(' ').filter((value, index, self) => self.indexOf(value) === index);
+  uniqueMessages.forEach((word) => {
+    const target = iconsArr.find((icon) => icon.name === word);
+    if (target && target.url && target.name) {
+      const regex = new RegExp(word, 'gi');
+      newMessage = newMessage.replace(regex, `<span><img src="${target.url}" alt="${target.name}" /></span>`);
     }
   });
 
-  return newMessage.length > 0 ? newMessage : message;
+  return newMessage;
 };
 
 module.exports = {
-  findIcon
+  findIcon,
 };

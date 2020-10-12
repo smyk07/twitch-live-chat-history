@@ -2,7 +2,7 @@
 
 Everyone can contribute to this Node.js App! 😀
 
-Contributions to this repository encouraged! We're all learning so mistakes and confusion are welcome, we're here to help and try to make contributing as friendly and accessible as possible. 
+Contributions to this repository encouraged! We're all learning so mistakes and confusion are welcome, we're here to help and try to make contributing as friendly and accessible as possible.
 
 ### Steps for contributing 🌈
 
@@ -14,7 +14,7 @@ Contributions to this repository encouraged! We're all learning so mistakes and 
 - Commit to your forked Repository 🌐
 - Create a PR ✅
 
-### We Are Expecting - 
+### We Are Expecting -
 
 - Bug-fixes 🐞
 - Adding anything that would improve this Node.js App. ✅

@@ -1,9 +1,7 @@
-const list = document.getElementById("contributors-list");
+const list = document.getElementById('contributors-list');
 
 window.onload = async function getList() {
-  const data = await fetch(
-    "https://api.github.com/repos/samyakbambole/twitch-live-chat-history/contributors"
-  );
+  const data = await fetch('https://api.github.com/repos/samyakbambole/twitch-live-chat-history/contributors');
   const json = await data.json();
   displayList(json);
 };
