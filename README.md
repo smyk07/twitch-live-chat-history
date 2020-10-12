@@ -13,14 +13,17 @@ You need to install `node.js` ([see here](https://nodejs.org/en/))
 After cloning the project, you need to install npm packages in the project.
 
 If you have at least node.js 10+, do:
+
 ```
 npm ci
 ```
+
 or if you are under node 10, use:
+
 ```
 npm i
 
-OR 
+OR
 
 npm install
 ```
@@ -39,13 +42,15 @@ You can listen from multiples Twitch channels, just add it as arguments:
 npm start TWITCH_CHANNEL_NAME_1 TWITCH_CHANNEL_NAME_2 TWITCH_CHANNEL_NAME_3
 ```
 
+A Web interface is also available when you start this app at http://localhost:8080
+
 ## How it works?
 
-When application is running, it will display all the chats.
+When application is running, it will display all the chats in the terminal as well as a web interface.
 
 If you want to retrieve chats, it has been stores in a Database called `chats.db`.
 
-## Contributing
+## Want to Contribute?
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
@@ -58,10 +63,14 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 - Erdem Uslu [erdemuslu](https://github.com/erdemuslu)
 - Roger Y [rogercyyu](https://github.com/rogercyyu)
 - Axel Campos Salazar [Babel78](https://github.com/Babel78)
+- Jason Chan [Jchann24](https://github.com/Jchann24)
+- Sebastian Domagała [sdomagala](https://github.com/sdomagala)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+© [samyakbambole](https://github.com/samyakbambole)
 
 ## Make Sure to Give This Repository a Star! ⭐
 
