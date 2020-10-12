@@ -50,7 +50,7 @@ When application is running, it will display all the chats in the terminal as we
 
 If you want to retrieve chats, it has been stores in a Database called `chats.db`.
 
-## Contributing
+## Want to Contribute?
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
