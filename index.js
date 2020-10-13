@@ -39,6 +39,9 @@ const client = new tmi.Client({
   channels: twitchChannelsArgs,
 });
 
+// prevent duplicate message
+let isClientConnected = false;
+
 // Clears Console
 function clearConsoleAndScrollbackBuffer() {
   process.stdout.write('\u001b[3J\u001b[2J\u001b[1J');
@@ -76,7 +79,10 @@ client.on('message', (channel, tags, message, self) => {
 
 io.on('connection', (socket) => {
   // connect client
-  client.connect();
+  if(!isClientConnected) {
+    client.connect();
+    isClientConnected = true;
+  }
 
   if (twitchChannelsArgs.length > 0) {
     twitchChannelsArgs.forEach((newChannel) => {
