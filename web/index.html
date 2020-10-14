@@ -39,7 +39,19 @@
             aria-describedby="inputGroup-sizing-sm"
           />
         </div>
-        <button type="button" class="btn btn-primary btn-sm ml-3" onclick="addChat()">Add</button>
+        <button type="button" class="btn btn-primary btn-sm ml-3 mb-3" onclick="addChat()">Add</button>
+        <div class="pl-1">
+          <table id="channel-table" class="table">
+            <thead>
+              <tr>
+                <th scope="col">Channel list</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="channelList">
+            </tbody>
+          </table>
+        </div>
       </nav>
     </div>
     <div class="chat-col">
