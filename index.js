@@ -48,6 +48,10 @@ function clearConsoleAndScrollbackBuffer() {
   console.clear();
 }
 
+function isInArray(value, array) {
+  return array.indexOf(value) > -1;
+}
+
 console.info(chalk.greenBright('Fetching messages...'));
 let fetched = false;
 
@@ -86,7 +90,9 @@ io.on('connection', (socket) => {
 
   if (twitchChannelsArgs.length > 0) {
     twitchChannelsArgs.forEach((newChannel) => {
-      twitchChannels.push(newChannel);
+      if(!isInArray(newChannel,twitchChannels)){
+        twitchChannels.push(newChannel);
+      }
     });
   }
 
@@ -98,14 +104,17 @@ io.on('connection', (socket) => {
   });
 
   socket.on('addChat', (newChannel) => {
-    twitchChannels.push(newChannel);
-    client.join(newChannel);
-    socket.emit('channels', twitchChannels);
+    if(!isInArray(newChannel,twitchChannels)){
+      twitchChannels.push(newChannel);
+      client.join(newChannel);
+      socket.emit('channels', twitchChannels);
+    }
   });
 
   socket.on('disconnectChannel', (channelToDisconnect) => {
     twitchChannels = twitchChannels.filter((channel) => channel !== channelToDisconnect);
-    client.part(channelToDisconnect.replace('#', ''));
+    // No need to disconnect channel be cause it will impact other user.
+    //client.part(channelToDisconnect.replace('#', ''));
   });
 });
 
