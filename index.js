@@ -3,6 +3,8 @@ const twitchChannelsArgs = process.argv.slice(2);
 const chalk = require('chalk');
 const tmi = require('tmi.js');
 const Datastore = require('nedb');
+const morgan = require('morgan'); 
+const consola = require('consola'); 
 const path = require('path');
 
 const express = require('express');
@@ -14,6 +16,7 @@ const { findIcon } = require('./helpers');
 const emoticons = require('./data/twitch-emoticons');
 
 app.use(express.static(path.join(__dirname, 'web')));
+app.use(morgan('tiny')); 
 app.set('views', path.join(__dirname, 'web'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
@@ -52,8 +55,12 @@ function isInArray(value, array) {
   return array.indexOf(value) > -1;
 }
 
-console.info(chalk.greenBright('Fetching messages...'));
+consola.success(chalk.greenBright('Fetching messages...'));
 let fetched = false;
+
+if (twitchChannelsArgs === '') {
+  consola.info('No Channels added, go to http://localhost:8080 to add or remove channels'); 
+}
 
 // listen messages from twitch channels
 client.on('message', (channel, tags, message, self) => {
