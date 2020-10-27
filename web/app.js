@@ -6,7 +6,9 @@ const renderChats = (channels) => {
     if (!$(c).length) {
       $('#chatRooms').append(`
         <div class="chats" id="${c.replace('#', '')}">
-          <h3>${c}</h3>
+          <a href="https://www.twitch.tv/${c.replace('#', '')}" target="_blank">
+            <h3>${c}</h3>
+          </a>
         </div>
       `);
       $('#channelList').append(`
@@ -63,12 +65,35 @@ socket.on('chat', (message) => {
   renderMessage(message);
 });
 
+const isDarkModeStr = document.cookie
+  .split('; ')
+  .find((row) => row.startsWith('dark-mode'))
+  .split('=')[1];
+
+const isDarkMode = isDarkModeStr == 'true';
+
+if (isDarkMode) {
+  $('input.checkbox').prop('checked', true);
+  $('.theme').attr('href', 'themes/dark.css');
+  $('#channel-table').attr('class', 'table table-dark');
+} else {
+  $('.theme').attr('href', 'themes/styles.css');
+  $('#channel-table').attr('class', 'table');
+}
+
 $('.checkbox').click(() => {
+  date = new Date();
+  date.setTime(date.getTime() + 30 * 24 * 60 * 60 * 1000);
+  expires = date.toUTCString();
   if ($('input.checkbox').is(':checked')) {
     $('.theme').attr('href', 'themes/dark.css');
-    $('#channel-table').attr('class','table table-dark');
+    $('#channel-table').attr('class', 'table table-dark');
+    darkMode = true;
   } else {
     $('.theme').attr('href', 'themes/styles.css');
-    $('#channel-table').attr('class','table');
+    $('#channel-table').attr('class', 'table');
+    darkMode = false;
   }
+  // create a cookie that expires after 30 days
+  document.cookie = `dark-mode=${darkMode};Expires=${expires};Max-age=2592000;SameSite=Strict`;
 });

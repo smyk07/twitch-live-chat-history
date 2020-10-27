@@ -24,6 +24,10 @@ body {
   color: white;
 }
 
+.chats a {
+  color: white;
+}
+
 .nav-col {
   height: 100vh;
   width: 264px;
