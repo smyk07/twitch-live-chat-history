@@ -65,10 +65,14 @@ socket.on('chat', (message) => {
   renderMessage(message);
 });
 
-const isDarkModeStr = document.cookie
-  .split('; ')
-  .find((row) => row.startsWith('dark-mode'))
-  .split('=')[1];
+let isDarkModeStr = false;
+
+if (document.cookie) {
+  isDarkModeStr = document.cookie
+    .split('; ')
+    .find((row) => row.startsWith('dark-mode'))
+    .split('=')[1];
+}
 
 const isDarkMode = isDarkModeStr == 'true';
 
