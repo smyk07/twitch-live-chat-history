@@ -4,9 +4,9 @@
 
 - [x] Make index.html
 - [x] Add CSS
-- [ ] Add JS (if needs to be responsive)
+- [x] Add JS (if needs to be responsive)
 - [x] Deploy with surge
-  - [x] Domain - twitch-live-chat-history.surge.sh
+  - [ ] Domain - https://twitch-live-chat-history.surge.sh (Force https)
 - [x] Make a Temporary 'Website Currently under Development'
 
 ### Stuff displayed on the website -
