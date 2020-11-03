@@ -58,7 +58,7 @@ function isInArray(value, array) {
 consola.success(chalk.greenBright('Fetching messages...'));
 let fetched = false;
 
-if (twitchChannelsArgs === '') {
+if (twitchChannelsArgs.length === 0) {
   consola.info('No Channels added, go to http://localhost:8080 to add or remove channels'); 
 }
 

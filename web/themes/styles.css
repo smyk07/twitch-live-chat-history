@@ -30,6 +30,10 @@ h3 {
   margin-top: 0;
 }
 
+.chats a {
+  color: black;
+}
+
 .chats {
   float: left;
   height: 460px;
