@@ -6,10 +6,14 @@
 - [x] Add CSS
 - [x] Add JS (if needs to be responsive)
 - [x] Deploy with surge
-  - [ ] Domain - https://twitch-live-chat-history.surge.sh (Force https)
+  - [x] Domain - https://twitch-live-chat-history.surge.sh (Force https)
 - [x] Make a Temporary 'Website Currently under Development'
 
 ### Stuff displayed on the website -
+
+- [x] Logo
+- [x] Transperent logo
+- [ ] Background img for website
 
 - [ ] Information about the Project
 - [ ] Link to GitHub Repo
